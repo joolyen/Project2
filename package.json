@@ -25,7 +25,8 @@
     "netlify-cli": "^2.65.0",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
-    "sequelize": "^5.8.6"
+    "sequelize": "^5.8.6",
+    "node-sass":"4.14.1"
   },
   "devDependencies": {
     "chai": "^4.1.2",
