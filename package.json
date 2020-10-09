@@ -1,8 +1,11 @@
 {
-  "name": "1-Passport-Example",
+  "name": "ourmovielookup",
   "version": "1.0.0",
-  "description": "",
+  "description": "A movie lookup tool",
   "main": "server.js",
+  "engines": {
+    "node": "12.x"
+  },
   "scripts": {
     "test": "npm run lint",
     "start": "node server.js",
