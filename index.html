@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            font-weight: 900;
+            color: rgb(168, 17, 17);
+            background-image: url(https://www.dhresource.com/0x0/f2/albu/g9/M01/BB/F5/rBVaWF0IjQaAdwgyAAVFUV0HJeM462.jpg);
+        }
+        
+        h1 {
+            text-align: center;
+            background-color: black;
+            padding: none;
+            max-width: 800px;
+            margin-left: 20%;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        label {
+            font-size: 18px;
+        }
+        
+        form {
+            padding: 16px;
+            max-width: 800px;
+            margin-left: 20%;
+        }
+        
+        input[type=text],
+        input[type=password] {
+            width: 100%;
+            font-size: 20px;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            display: inline-block;
+            border: none;
+            background: black;
+        }
+        
+        input[type=text]:focus,
+        input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+        
+        hr {
+            border: 1px solid #f1f1f1;
+            margin-bottom: 25px;
+        }
+        
+        .registerbtn {
+            background-color: grey;
+            color: black;
+            padding: 16px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
+        }
+        
+        .registerbtn:hover {
+            opacity: 1;
+        }
+        
+        a {
+            color: dodgerblue;
+            text-decoration: none;
+        }
+        
+        .signin {
+            background-color: black;
+            text-align: center;
+        }
+        
+        @media (max-width: 800px) {
+            form {
+                width: 100%;
+                margin-left: 0px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>The MOVEie Search</h1>
+    <form>
+        <label for="email"></label>
+        <input type="text" placeholder="Enter Email" name="email" required>
+        <label for="psw"></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+        <label for="psw-repeat"></label>
+        <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+        <hr>
+
+        <div class="signin">
+            <p>Already have an account? <a href="#">Sign in</a></p>
+        </div>
+    </form>
+</body>
+
+</html>
