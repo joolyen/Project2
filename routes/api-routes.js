@@ -1,6 +1,7 @@
 // Requiring our models and passport as we've configured it
 const db = require("../models");
 const passport = require("../config/passport");
+const axios = require("axios");
 
 module.exports = function(app) {
   // Using the passport.authenticate middleware with our local strategy.
@@ -50,4 +51,18 @@ module.exports = function(app) {
       });
     }
   });
+
+
+  app.get("/api/moviesearch", function(req, res) {
+    const {value} = req.query
+    console.log(value);
+    axios.get(`https://api.themoviedb.org/3/search/movie?api_key=8d048a3c98dcc45935bc83db0ed17aa6&language=en-US&query=${value}&page=1`)
+      .then(response => res.json(response.data))
+      return;
+  });
 };
+
+//res.data
+
+
+//"https://api.themoviedb.org/3/search/movie?api_key=8d048a3c98dcc45935bc83db0ed17aa6&language=en-US&query=movie&page=1&include_adult=false&year=2004"
