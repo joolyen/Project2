@@ -1,47 +1,51 @@
-@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Monoton&family=Odibee+Sans&display=swap');
-  
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Monoton&family=Odibee+Sans&display=swap");
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+    box-sizing: inherit;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
-html{
-  height: 100%;
+
+html {
+    height: 100%;
 }
+
 body {
-  height: 100%;
-  display: block;
-  text-align: center;
-  background-color: #003366;
-  font-family: 'Odibee Sans', cursive;
+    height: 100%;
+    display: block;
+    text-align: center;
+    background-color: #003366;
+    font-family: "Odibee Sans", cursive;
 }
+
 video {
-  z-index: -1;
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
+    z-index: -1;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
 }
 
 nav {
-background-color: #08c6e7;
+    background-color: #08c6e7;
 }
-.navbar-header {
-  font-family: 'Monoton', cursive;
-  color: rgb(252, 165, 4);
-}
-#home-page {
-  max-width: 1050px; 
-  height: 1000px;
-	margin: 200px auto; 
-	float: center;
-  }
 
-  .jumbotron {
+.navbar-header {
+    font-family: "Monoton", cursive;
+    color: rgb(252, 165, 4);
+}
+
+#home-page {
+    max-width: 1050px;
+    height: 1000px;
+    margin: 200px auto;
+    float: center;
+}
+
+.jumbotron {
     background-color: #08c6e7;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -57,10 +61,10 @@ background-color: #08c6e7;
     align-items: center;
     color: whitesmoke;
     text-align: center;
-  }
+}
 
-  h1 {
-    font-family: 'Monoton', cursive;
+h1 {
+    font-family: "Monoton", cursive;
     color: rgb(252, 165, 4);
     font-weight: bolder;
     margin-left: auto;
@@ -68,177 +72,181 @@ background-color: #08c6e7;
     margin-bottom: 25px;
     text-align: center;
     font-size: 65px;
-    padding: 20px; 
-  }
-  .lead {
+    padding: 20px;
+}
+
+.lead {
     font-size: 30px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-  }
+}
 
 .search-bar {
-  font-size: 30px;
-  margin-left: auto;
-  margin-right: auto;
+    font-size: 30px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .container {
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #search-options {
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: rgba(95, 90, 78, 0.5);
-  box-shadow: rgba(0, 0, 0, 1);
-  color: #fff;
-  padding-top: 60px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(95, 90, 78, 0.5);
+    box-shadow: rgba(0, 0, 0, 1);
+    color: #fff;
+    padding-top: 60px;
 }
+
 
 /* Results Page */
 
-  .cards {
+.cards {
     max-width: 1000px;
     display: grid;
     margin: auto;
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1px;
-  }
+}
 
-  .card{
+.card {
     margin-top: 100px;
     margin-bottom: 0px;
     padding: 100px 0px;
-  }
+}
 
 
 /* Login Page */
-h2 {
-  font-family: 'Monoton', cursive;
-  color: rgb(252, 165, 4);
-}
 
+h2 {
+    font-family: "Monoton", cursive;
+    color: rgb(252, 165, 4);
+}
 
 .login-form {
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: rgba(95, 90, 78, 0.5);
-  box-shadow: rgba(0, 0, 0, 1);
-  color: #fff;
-  padding-top: 60px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(95, 90, 78, 0.5);
+    box-shadow: rgba(0, 0, 0, 1);
+    color: #fff;
+    padding-top: 60px;
 }
-
 
 form.signup,
 form.login {
-  margin-top: 50px;
+    margin-top: 50px;
 }
 
 label {
-  font-size: 18px;
+    font-size: 18px;
 }
 
 form {
-  padding: 16px;
-  max-width: 800px;
-  margin-left: 20%;
+    padding: 16px;
+    max-width: 800px;
+    margin-left: 20%;
 }
 
-input[type=text],
-input[type=password] {
-  width: 100%;
-  font-size: 20px;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  display: inline-block;
-  border: none;
-  background: #ddd;
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    font-size: 20px;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #ddd;
 }
 
-input[type=text]:focus,
-input[type=password]:focus {
-  background-color: #ddd;
-  outline: none;
+input[type="text"]:focus,
+input[type="password"]:focus {
+    background-color: #ddd;
+    outline: none;
 }
 
 hr {
-  border: 1px solid #f1f1f1;
-  margin-bottom: 25px;
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
 }
 
 .registerbtn {
-  background-color: grey;
-  color: black;
-  padding: 16px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  opacity: 0.9;
+    background-color: grey;
+    color: black;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
 }
 
 .registerbtn:hover {
-  opacity: 1;
+    opacity: 1;
 }
 
 a {
-  color: dodgerblue;
-  text-decoration: none;
+    color: dodgerblue;
+    text-decoration: none;
 }
 
 .signin {
-  background-color: black;
-  text-align: center;
+    background-color: black;
+    text-align: center;
 }
 
 @media (min-width: 600px) {
-  .cards { grid-template-columns: repeat(2, 1fr); }
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 800px) {
-  form {
-      width: 100%;
-      margin-left: 0px;
-  }
+    form {
+        width: 100%;
+        margin-left: 0px;
+    }
 }
+
 @media (max-width: 1060px) {
-  .media::after{
-      content:"\a";
-  }
-  .card-text::before {
-      font-size: 17px;
-      content: "\a";
-  }
+    .media::after {
+        content: "\a";
+    }
+    .card-text::before {
+        font-size: 17px;
+        content: "\a";
+    }
 }
 
 @media (min-aspect-ratio: 16/9) {
-  video {
-      width: 100%;
-      height: auto;
-  }
+    video {
+        width: 100%;
+        height: auto;
+    }
 }
 
 @media (max-aspect-ratio: 16/9) {
-  video {
-      width: auto;
-      height: 100%;
-  }
-} 
+    video {
+        width: auto;
+        height: 100%;
+    }
+}
 
 @media (max-width: 767px) {
-  video {
-      display: none;
-  }
-  body { 
-      background: url(../assets/tape-background.PNG);
-      background-size: cover;
-  }
+    video {
+        display: none;
+    }
+    body {
+        background: url(../assets/tape-background.PNG);
+        background-size: cover;
+    }
 }
