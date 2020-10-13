@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
         <link href='stylesheets/style.css' rel='stylesheet' type='text/css' media='screen'>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
         integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
 
     <!-- <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
@@ -20,7 +20,7 @@
     <video src="assets/production ID_3946080.mp4" class="tape-vid" autoplay loop playsinline muted></video>
     <nav class="navbar navbar-expand-md navbar-light bg-* sticky-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">bmovie</a>
+            <a class="navbar-header" href="#">bmovie</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -36,7 +36,7 @@
                         <a class="nav-link" href="#">Account</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Login</a>
+                        <a class="nav-link" href="login.html">Login</a>
                     </li>
                 </ul>
             </div>
@@ -61,45 +61,51 @@
                     </div>
                     <!-- Create event click handler here to go to search-criteria -->
                     <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-2" class="search-bar">
-                        <a href="#"><button type="button"
-                                class="btn btn-outline-secondary button-lg">Search</button></a>
+                        <a href="#search-options">
+                            <button type="button" class="btn btn-outline-secondary button-lg" id="search-btn" onclick="$('search-options').toggle();" data-toggle="collapse">
+                                Search
+                            </button>
+                        </a>
                     </div>
                 </div>
 
             </div>
         </div>
 
-        <div class="container-fluid" id="search-criteria">
-            <div class="col-lg-3">
-                <div class="form-group">
-                    <input type="text" class="form-control" name="size" placeholder="Search Category" />
+        <div class="container" id="search-div-container">
+            <div id="search-options" class="collapse box-fluid"> 
+                <div class="display-1"><h2>Show me what you got</h2></div>   
+                <div class="col-lg-3">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="size" placeholder="Search Category" />
+                    </div> <br>
+                </div>
+                <div class="col-lg-3">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="clr" placeholder="Search-Actor" />
+                    </div>
                 </div> <br>
-            </div>
-            <div class="col-lg-3">
-                <div class="form-group">
-                    <input type="text" class="form-control" name="clr" placeholder="Search-Actor" />
+                <div class="col-lg-3">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="qty" placeholder="Search-Famous-Lines" />
+                    </div>
+                </div> <br>
+                <div class="col-lg-3">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="size" placeholder="Search-Seasons" />
+                    </div>
+                </div> <br>
+                <div class="col-lg-3">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="clr" placeholder="Search-Past-Seasons" />
+                    </div>
+                </div> <br>
+                <div class="col-lg-3">
+                    <div class="form-group">
+                        <input type="text" name="qty" placeholder="Search-Kids" />
+                    </div>
                 </div>
-            </div> <br>
-            <div class="col-lg-3">
-                <div class="form-group">
-                    <input type="text" class="form-control" name="qty" placeholder="Search-Famous-Lines" />
-                </div>
-            </div> <br>
-            <div class="col-lg-3">
-                <div class="form-group">
-                    <input type="text" class="form-control" name="size" placeholder="Search-Seasons" />
-                </div>
-            </div> <br>
-            <div class="col-lg-3">
-                <div class="form-group">
-                <input type="text" class="form-control" name="clr" placeholder="Search-Past-Seasons" />
             </div>
-        </div> <br>
-        <div class="col-lg-3">
-            <div class="form-group">
-                <input type="text" name="qty" placeholder="Search-Kids" />
-            </div>
-        </div>
         </div>
     </main>
 
@@ -113,4 +119,6 @@
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- <script src='index.js'></script> -->
+    <!-- <script src='js/frontpage.js'></script> -->
+</body>
+</html>

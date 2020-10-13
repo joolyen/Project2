@@ -30,6 +30,10 @@ video {
 nav {
 background-color: #08c6e7;
 }
+.navbar-header {
+  font-family: 'Monoton', cursive;
+  color: rgb(252, 165, 4);
+}
 #home-page {
   max-width: 1050px; 
   height: 1000px;
@@ -59,39 +63,75 @@ background-color: #08c6e7;
     font-family: 'Monoton', cursive;
     color: rgb(252, 165, 4);
     font-weight: bolder;
-    margin-left: 60px;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 25px;
+    text-align: center;
     font-size: 65px;
     padding: 20px; 
   }
   .lead {
     font-size: 30px;
-    margin-left: 75px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
   }
 
-  .search-bar {
- 
-    font-size: 30px;
-    margin-left: 75px;
-  }
-h2 {
-  font-family: 'Monoton', cursive;
-  color: rgb(252, 165, 4);
-  /* margin-left: 50px; */
+.search-bar {
+  font-size: 30px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .container {
   position: relative;
-  bottom: 10%;
-  right: 10%;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+#search-options {
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(95, 90, 78, 0.5);
+  box-shadow: rgba(0, 0, 0, 1);
+  color: #fff;
+  padding-top: 60px;
+}
+
+/* Results Page */
+
+  .cards {
+    max-width: 1000px;
+    display: grid;
+    margin: auto;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1px;
+  }
+
+  .card{
+    margin-top: 100px;
+    margin-bottom: 0px;
+    padding: 100px 0px;
+  }
+
+
+/* Login Page */
+h2 {
+  font-family: 'Monoton', cursive;
+  color: rgb(252, 165, 4);
+}
+
+
 .login-form {
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: rgba(0, 0, 0, 0.1);
-  box-shadow: rgba(0,0, 0, 1);
+  background: rgba(95, 90, 78, 0.5);
+  box-shadow: rgba(0, 0, 0, 1);
   color: #fff;
   padding-top: 60px;
 }
@@ -159,7 +199,9 @@ a {
   text-align: center;
 }
 
-
+@media (min-width: 600px) {
+  .cards { grid-template-columns: repeat(2, 1fr); }
+}
 
 @media (max-width: 800px) {
   form {
@@ -196,7 +238,7 @@ a {
       display: none;
   }
   body { 
-      background: url(assets/tape-background.PNG);
+      background: url(../assets/tape-background.PNG);
       background-size: cover;
   }
 }
