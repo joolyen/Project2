@@ -55,14 +55,64 @@ module.exports = function(app) {
 
 
     app.get("/api/moviesearch", function(req, res) {
+        console.log("USER MAKING REQUEST =>", req.user);
         const { value } = req.query;
         console.log(value);
-        axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${MOVIE_KEY}&language=en-US&query=${value}&page=1`)
-            .then(response => res.json(response.data))
+
+        if (!req.user){
+            res.redirect("/login")
+        } else {
+            axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${MOVIE_KEY}&language=en-US&query=${value}&page=1`)
+            .then(response => res.json(response.data)).catch(err => console.log(err));
+        }
+
+        
     });
 };
 
-//res.data
 
 
-//"https://api.themoviedb.org/3/search/movie?api_key=8d048a3c98dcc45935bc83db0ed17aa6&language=en-US&query=movie&page=1&include_adult=false&year=2004"
+// *** make sure to wrap within the module exports curly brace
+
+//   app.get("/api/results", function(req, res) {
+//     // Here we add an "include" property to our options in our findAll query
+//     // We set the value to an array of the models we want to include in a left outer join
+//     // In this case, just db.Post
+//     db.Movies.findAll({
+//       include: [db.Post]
+//     }).then(function(dbMovie) {
+//       res.json(dbAhor);
+//     });
+//   });
+
+//   app.get("/api/authors/:id", function(req, res) {
+//     // Here we add an "include" property to our options in our findOne query
+//     // We set the value to an array of the models we want to include in a left outer join
+//     // In this case, just db.Post
+//     db.Author.findOne({
+//       where: {
+//         id: req.params.id
+//       },
+//       include: [db.Post]
+//     }).then(function(dbAuthor) {
+//       res.json(dbAuthor);
+//     });
+//   });
+
+//   app.post("/api/authors", function(req, res) {
+//     db.Author.create(req.body).then(function(dbAuthor) {
+//       res.json(dbAuthor);
+//     });
+//   });
+
+//   app.delete("/api/authors/:id", function(req, res) {
+//     db.Author.destroy({
+//       where: {
+//         id: req.params.id
+//       }
+//     }).then(function(dbAuthor) {
+//       res.json(dbAuthor);
+//     });
+//   });
+
+// };
