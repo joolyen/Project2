@@ -1,3 +1,86 @@
-<h1>Sign-Up Page</h1>
+<!DOCTYPE html>
+<html>
 
-<p>Please Work!?!?</p>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>bmovie</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href='stylesheets/style.css' rel='stylesheet' type='text/css' media='screen'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
+</head>
+
+<body>
+        <!-- Navbar Code -->
+    <video src="assets/production ID_3946080.mp4" autoplay loop playsinline muted></video>
+    <nav class="navbar navbar-expand-md navbar-light bg-* sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-header" href="#">bmovie</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-card">
+                        <a class="nav-link" href="/views/index.handlebars">Home</a>
+                    </li>
+                    <li class="nav-card">
+                        <a class="nav-link" href="#">Saved Lists</a>
+                    </li>
+                    <li class="nav-card">
+                        <a class="nav-link" href="#">Account</a>
+                    </li>
+                    <li class="nav-card">
+                        <a class="nav-link" href="/views/login.handlebars">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main>
+    <div class="container-fluid" id="home-page">
+        <div class="row jumbotron">
+            <div class="title">
+                <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-10">
+                    <h1 class="display-1">bmovie</h1>
+                    <p class="lead">What are we watching tonight?</p>
+                    <hr class="display-1">
+                </div>
+            </div>
+            <div class="row search-bar">
+                <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 col-xl-10">
+                    <div class="form-group">
+                        <input type="text" id="search-bar" class="form-control" name="size"
+                            placeholder="What are you in the mood for?" />
+                    </div> <br>
+                </div>
+                <!-- Create event click handler here to go to search-criteria -->
+                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-2" class="search-bar">
+                    <a href="#search-options">
+                        <button type="button" class="btn btn-outline-secondary button-lg" id="search-btn"
+                            onclick="$('search-options').toggle();" data-toggle="collapse">
+                            Search
+                        </button>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </main>
+</body>
+</html>
