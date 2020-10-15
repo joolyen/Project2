@@ -14,7 +14,6 @@ module.exports = function(app) {
       email: req.user.email,
       id: req.user.id
     });
-
   });
 
   // Route for signing up a user. The user's password is automatically hashed and stored securely thanks to
@@ -54,9 +53,9 @@ module.exports = function(app) {
     }
   });
 
-//--------------------------------------------
+  //--------------------------------------------
 
-// axios call to retrieve movie data from TMDB API
+  // axios call to retrieve movie data from TMDB API
   app.get("/api/moviesearch", (req, res) => {
     console.log("USER MAKING REQUEST =>", req.user);
     const { value } = req.query;
@@ -77,7 +76,7 @@ module.exports = function(app) {
   // to create the movies table in movie_db
   app.post("/api/members", (req, res) => {
     db.Movie.create({
-      title: req.body.title,
+      title: req.body.title
     })
       .then(() => {
         res.redirect(307, "/api/login");
@@ -87,52 +86,46 @@ module.exports = function(app) {
       });
   });
 
-
-  app.post("/api/movies", function(req, res) {
+  app.post("/api/movies", (req, res) => {
     // add movies to the database
     console.log("POST movies:", req.body)
-     db.Movie.create({
-    title: req.body.title,
-    overview: req.body.overview,
-    poster_path: req.body.poster_path
+    db.Movie.create({
+      title: req.body.title,
+      overview: req.body.overview,
+      // eslint-disable-next-line camelcase
+      poster_path: req.body.poster_path
 
-    // and any other fields you would like to add
-    }).then(function(dbMovies) {
-    
-     res.json(dbMovies);
-       });
-       });
+      // and any other fields you would like to add
+    }).then(dbMovies => {
+      res.json(dbMovies);
+    });
+  });
 
+  // doug's new project for wednesday night
+  // =======
 
-// doug's new project for wednesday night
-=======
-
-
-// GET route for getting all of the todos
-app.get("/api/Movies", function(req, res) {
+  // GET route for getting all of the todos
+  app.get("/api/Movies", (req, res) => {
     // findAll returns all entries for a table when used with no options
-    db.Movie.findAll({}).then(function(dbMovies) {
+    db.Movie.findAll({}).then(dbMovies => {
       // We have access to the todos as an argument inside of the callback function
       res.json(dbMovies);
     });
   });
 
-
-
-//from askBCS
-app.post("/api/Movies", function(req, res) {
+  //from askBCS
+  app.post("/api/Movies", (req, res) => {
     // add movies to the database
     console.log("POST movies:", req.body)
-     db.Movies.create({
-    movie_name: req.body.movie_name,
-    popularity: req.body.popularity
-    // and any other fields you would like to add
-    }).then(function(dbMovies) {
-    
-     res.json(dbMovies);
-       });
-       });
-
+    db.Movies.create({
+      // eslint-disable-next-line camelcase
+      movie_name: req.body.movie_name,
+      popularity: req.body.popularity
+      // and any other fields you would like to add
+    }).then(dbMovies => {
+      res.json(dbMovies);
+    });
+  });
 };
 
 // *** make sure to wrap within the module exports curly brace
