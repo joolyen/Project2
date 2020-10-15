@@ -1,10 +1,11 @@
 // this must be altered to send results to the DB, preferably upon clicking "save"
 
 
-function loginUser(email, password) {
-    $.post("/api/login", {
-      email: email,
-      password: password
+function populateMovieTable(title, overview, poster_path) {
+    $.post("/api/results", {
+      title: title,
+      overview: overview,
+      poster_path: poster_path
     })
       .then(() => {
         window.location.replace("/members");
