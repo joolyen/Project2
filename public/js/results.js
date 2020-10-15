@@ -8,7 +8,7 @@ function populateMovieTable(title, overview, poster_path) {
       poster_path: poster_path
     })
       .then(() => {
-        window.location.replace("/results");
+        //window.location.replace("/results");
         // If there's an error, log the error
       })
       .catch(err => {
@@ -16,4 +16,4 @@ function populateMovieTable(title, overview, poster_path) {
       });
     };
 
-//populateMovieTable("song", "stuff", "www.blah.com");
+populateMovieTable("song", "stuff", "www.blah.com");
