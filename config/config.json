@@ -1,9 +1,9 @@
 {
     "development": {
-        "username": "root",
-        "password": "null",
-        "database": "movies_db",
-        "host": "localhost",
+        "username": "ytmxcvedtspzce1t",
+        "password": "v0mgwar4y9io9vs6",
+        "database": "avgn5u1otniz0we3",
+        "host": "kf3k4aywsrp0d2is.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
         "dialect": "mysql"
     },
     "test": {
