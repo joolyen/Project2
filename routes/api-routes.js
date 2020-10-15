@@ -54,6 +54,9 @@ module.exports = function(app) {
     }
   });
 
+//--------------------------------------------
+
+// axios call to retrieve movie data from TMDB API
   app.get("/api/moviesearch", (req, res) => {
     console.log("USER MAKING REQUEST =>", req.user);
     const { value } = req.query;
@@ -84,6 +87,7 @@ module.exports = function(app) {
       });
   });
 
+
   app.post("/api/movies", function(req, res) {
     // add movies to the database
     console.log("POST movies:", req.body)
@@ -101,31 +105,35 @@ module.exports = function(app) {
 
 
 // doug's new project for wednesday night
+=======
 
-// // GET route for getting all of the todos
-// app.get("/api/Movies", function(req, res) {
-//     // findAll returns all entries for a table when used with no options
-//     db.Todo.findAll({}).then(function(dbMovies) {
-//       // We have access to the todos as an argument inside of the callback function
-//       res.json(dbMovies);
-//     });
-//   });
 
-};
+// GET route for getting all of the todos
+app.get("/api/Movies", function(req, res) {
+    // findAll returns all entries for a table when used with no options
+    db.Movie.findAll({}).then(function(dbMovies) {
+      // We have access to the todos as an argument inside of the callback function
+      res.json(dbMovies);
+    });
+  });
+
+
 
 //from askBCS
-// app.post("/api/Movies", function(req, res) {
-//     // add movies to the database
-//      db.Movies.create({
-//     movie_name: req.body.movie_name,
-//     popularity: req.body.popularity
-//     // and any other fields you would like to add
-//     }).then(function(dbMovies) {
+app.post("/api/Movies", function(req, res) {
+    // add movies to the database
+    console.log("POST movies:", req.body)
+     db.Movies.create({
+    movie_name: req.body.movie_name,
+    popularity: req.body.popularity
+    // and any other fields you would like to add
+    }).then(function(dbMovies) {
     
-//      res.json(dbMovies);
-//        });
-//        });
+     res.json(dbMovies);
+       });
+       });
 
+};
 
 // *** make sure to wrap within the module exports curly brace
 
