@@ -1,0 +1,6 @@
+get value from input box (on front end)
+upon submit, sned value to server
+server digests value, sends request
+response is parsed, store valid responses in DB
+forward repsonse to front end
+
