@@ -68,6 +68,18 @@ module.exports = function(app) {
 
         
     });
+
+// doug's new project for wednesday night
+
+// // GET route for getting all of the todos
+// app.get("/api/Movies", function(req, res) {
+//     // findAll returns all entries for a table when used with no options
+//     db.Todo.findAll({}).then(function(dbMovies) {
+//       // We have access to the todos as an argument inside of the callback function
+//       res.json(dbMovies);
+//     });
+//   });
+
 };
 
 
