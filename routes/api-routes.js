@@ -60,6 +60,18 @@ module.exports = function(app) {
         axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${MOVIE_KEY}&language=en-US&query=${value}&page=1`)
             .then(response => res.json(response.data))
     });
+
+// doug's new project for wednesday night
+
+// // GET route for getting all of the todos
+// app.get("/api/Movies", function(req, res) {
+//     // findAll returns all entries for a table when used with no options
+//     db.Todo.findAll({}).then(function(dbMovies) {
+//       // We have access to the todos as an argument inside of the callback function
+//       res.json(dbMovies);
+//     });
+//   });
+
 };
 
 //res.data
