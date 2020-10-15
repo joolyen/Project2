@@ -27,23 +27,13 @@ $(document).ready(() => {
       overview: overview,
       // eslint-disable-next-line camelcase
       poster_path: poster_path
-<<<<<<< HEAD
-    }).then(() => {
-      window.location.replace("/results");
-    });
-  }
-  populateMovieTable();
-
-  // populateMovieTable("song", "stuff", "www.blah.com");
-});
-=======
     })
       .then(() => {
 
         //window.location.replace("/results");
 
 
-function loginUser(email, password) {
+    function loginUser(email, password) {
     $.post("/api/login", {
       email: email,
       password: password
@@ -60,8 +50,9 @@ function loginUser(email, password) {
     };
 
 
-populateMovieTable("song", "stuff", "www.blah.com");
+  // populateMovieTable("song", "stuff", "www.blah.com");
 
       });
 
->>>>>>> main
+    }
+};
