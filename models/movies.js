@@ -4,7 +4,14 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: false
         },
-
+        overview: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        poster_path: {
+            type: DataTypes.STRING,
+            allowNull: false
+        }
     })
     return Movie;
 }

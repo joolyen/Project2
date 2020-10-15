@@ -102,6 +102,7 @@ app.get("/api/Movies", function(req, res) {
 //from askBCS
 app.post("/api/Movies", function(req, res) {
     // add movies to the database
+    console.log("POST movies:", req.body)
      db.Movies.create({
     movie_name: req.body.movie_name,
     popularity: req.body.popularity
