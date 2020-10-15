@@ -14,6 +14,7 @@ module.exports = function(app) {
       email: req.user.email,
       id: req.user.id
     });
+
   });
 
   // Route for signing up a user. The user's password is automatically hashed and stored securely thanks to
@@ -69,6 +70,18 @@ module.exports = function(app) {
         .catch(err => console.log(err));
     }
   });
+
+// doug's new project for wednesday night
+
+// // GET route for getting all of the todos
+// app.get("/api/Movies", function(req, res) {
+//     // findAll returns all entries for a table when used with no options
+//     db.Todo.findAll({}).then(function(dbMovies) {
+//       // We have access to the todos as an argument inside of the callback function
+//       res.json(dbMovies);
+//     });
+//   });
+
 };
 
 // *** make sure to wrap within the module exports curly brace
