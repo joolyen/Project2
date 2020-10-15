@@ -1,0 +1,10 @@
+comments file
+
+what am i using to persist the user sign in info
+is there storage (various options) for keeping track of the user
+need to access req.user (from passport)
+in movie search, if req.user, else redirect to login
+need to create separate table
+movies tables will have id, and several columns with movie info
+
+
