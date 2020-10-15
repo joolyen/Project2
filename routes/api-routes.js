@@ -88,6 +88,26 @@ module.exports = function(app) {
   });
 
 
+  app.post("/api/movies", function(req, res) {
+    // add movies to the database
+    console.log("POST movies:", req.body)
+     db.Movie.create({
+    title: req.body.title,
+    overview: req.body.overview,
+    poster_path: req.body.poster_path
+
+    // and any other fields you would like to add
+    }).then(function(dbMovies) {
+    
+     res.json(dbMovies);
+       });
+       });
+
+
+// doug's new project for wednesday night
+=======
+
+
 // GET route for getting all of the todos
 app.get("/api/Movies", function(req, res) {
     // findAll returns all entries for a table when used with no options

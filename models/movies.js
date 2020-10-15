@@ -6,12 +6,13 @@ module.exports = function(sequelize, DataTypes) {
         },
         overview: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: false,
         },
         poster_path: {
             type: DataTypes.STRING,
             allowNull: false
         }
+        
     })
     return Movie;
 }

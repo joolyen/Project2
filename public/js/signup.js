@@ -40,3 +40,4 @@ $(document).ready(() => {
     $("#alert").fadeIn(500);
   }
 });
+
