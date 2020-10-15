@@ -1,37 +1,26 @@
-    <main>
-        <!-- Place holder for now. -->
-        <div class="container-fluid" id="results-page">
-            <div class="cards">
-                <div class="card">
-                    <div class="box">
-                        <div class="movie-results"><span><h3>Movie1</h3</span></div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <div class="movie-results"><span><h3>Movie2</h3></span></div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <div class="movie-results"><span><h3>Movie3</h3></span></div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <div class="movie-results"><span><h3>Movie4</h3></span></div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <div class="movie-results"><span><h3>Movie5</h3></span></div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <div class="movie-results"><span><h3>Movie6</h3></span></div>
-                    </div>
-                </div>
-            </div>
+<main></main>
+  <div class="container">
+    <h1 class="display-4 text-center">Results</h1>
+    <div class="row">
+      <div class="col-xl-6">
+        <div class="card" id="movie-card">
+          <ul class="list-group list-group-flush">
+            {{#each movie}}
+
+            <li>
+              {{movie_title}}
+              {{movie_overview}}
+              {{movie_poster}}
+              
+            <button class="change-save btn btn-success" data-id="{{id}}" data-saved="{{save}}">
+                Save 
+            </button>
+            </li>
+            {{/each}}          
+          </ul>
         </div>
-    </main>
+      </div>
+
+    </div>
+  </div>
+</main>
