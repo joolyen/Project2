@@ -27,6 +27,7 @@ $(document).ready(() => {
       overview: overview,
       // eslint-disable-next-line camelcase
       poster_path: poster_path
+<<<<<<< HEAD
     }).then(() => {
       window.location.replace("/results");
     });
@@ -35,3 +36,32 @@ $(document).ready(() => {
 
   // populateMovieTable("song", "stuff", "www.blah.com");
 });
+=======
+    })
+      .then(() => {
+
+        //window.location.replace("/results");
+
+
+function loginUser(email, password) {
+    $.post("/api/login", {
+      email: email,
+      password: password
+    })
+      .then(() => {
+        window.location.replace("/members");
+      
+        // If there's an error, log the error
+      })
+      .catch(err => {
+        console.error(err);
+
+      });
+    };
+
+
+populateMovieTable("song", "stuff", "www.blah.com");
+
+      });
+
+>>>>>>> main
