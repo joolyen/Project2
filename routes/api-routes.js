@@ -71,6 +71,19 @@ module.exports = function(app) {
     }
   });
 
+  // to create the movies table in movie_db
+  app.post("/api/members", (req, res) => {
+    db.Movie.create({
+      title: req.body.title,
+    })
+      .then(() => {
+        res.redirect(307, "/api/login");
+      })
+      .catch(err => {
+        res.status(401).json(err);
+      });
+  });
+
 // doug's new project for wednesday night
 
 // // GET route for getting all of the todos
@@ -83,6 +96,20 @@ module.exports = function(app) {
 //   });
 
 };
+
+//from askBCS
+// app.post("/api/Movies", function(req, res) {
+//     // add movies to the database
+//      db.Movies.create({
+//     movie_name: req.body.movie_name,
+//     popularity: req.body.popularity
+//     // and any other fields you would like to add
+//     }).then(function(dbMovies) {
+    
+//      res.json(dbMovies);
+//        });
+//        });
+
 
 // *** make sure to wrap within the module exports curly brace
 
