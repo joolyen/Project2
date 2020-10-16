@@ -5,7 +5,14 @@ const path = require("path");
 const isAuthenticated = require("../config/middleware/isAuthenticated");
 
 module.exports = function(app) {
+  // We want users to search freely for the movie that they are looking for
   app.get("/", (req, res) => {
+    res.render("search", {title: "app landing page", layout: "home" });
+  });
+  
+  
+  
+  app.get("/signup", (req, res) => {
     // If the user already has an account send them to the members page
     if (req.user) {
       res.redirect("/index");

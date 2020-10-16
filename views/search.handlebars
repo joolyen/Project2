@@ -1,39 +1,22 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-6 col-md-offset-3">
-      <h1>Welcome <span class="member-name"></span></h1>
+    <div>
+      <h1 class="text-center">bmovie</h1>
     </div>
   </div>
-</div>
 
-<main>
-    <div class="container-fluid" id="home-page">
-        <div class="row jumbotron">
-            <div class="title">
-                <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-10">
-                    <h1 class="display-1">bmovie</h1>
-                    <p class="lead">What are we watching tonight?</p>
-                    <hr class="display-1">
+    <div class="jumbotron">
+        <div class="title search-bar">
+            <div>
+                <h2>What are we watching tonight?</h2>
+                <hr class="display-1">
+                <div class="form-group">
+                    <input type="text" id="search-bar" class="form-control" name="size" placeholder="What are you in the mood for?" />
+                    <button type="button" class="btn btn-outline-secondary button-lg" id="search-btn" onclick="$('search-options').toggle();" data-toggle="collapse">Search</button>
                 </div>
             </div>
-            <div class="row search-bar">
-                <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 col-xl-10">
-                    <div class="form-group">
-                        <input type="text" id="search-bar" class="form-control" name="size"
-                            placeholder="What are you in the mood for?" />
-                    </div> <br>
-                </div>
-                <!-- Create event click handler here to go to search-criteria -->
-                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-2" class="search-bar">
-                    <a href="#search-options">
-                        <button type="button" class="btn btn-outline-secondary button-lg" id="search-btn"
-                            onclick="$('search-options').toggle();" data-toggle="collapse">
-                            Search
-                        </button>
-                    </a>
-                </div>
-            </div>
-
         </div>
     </div>
+
+</div>
