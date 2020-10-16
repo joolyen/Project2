@@ -60,7 +60,7 @@ video {
     position: relative;
     display: flex;
     align-items: center;
-    color: #222
+    color: #222;
     text-align: center;
 }
 
@@ -104,9 +104,9 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #e3e3e3
+    background: #e3e3e3;
     box-shadow: rgba(0, 0, 0, 1);
-    color: #222
+    color: #222;
     padding-top: 60px;
 }
 
@@ -152,10 +152,14 @@ h1 {
     color: #fff;
     padding-top: 60px;
 }
+h2 {
+    color: rgb(252, 165, 4);
+}
 
 form.signup,
 form.login {
     margin-top: 50px;
+    align-items: center;
 }
 
 label {
